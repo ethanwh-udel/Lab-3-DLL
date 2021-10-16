@@ -1,6 +1,7 @@
 
 #include "DNode.hpp"
 #include "DLL.hpp"
+#include "Song.hpp"
 #include <iostream>
 #include <stdlib.h>
 using namespace std;
@@ -17,6 +18,33 @@ using namespace std;
 		last = n;
 		numSongs=1;
 	}
+
+	void DLL::push(string t, string a, int m, int s){
+		DNode *n = new DNode (t,a,m,s);
+
+		if(first == NULL){
+			first = n;
+			last = n;
+
+		}
+		else{
+			n->prev = last;
+			last->next = n;
+			last = n;
+		}
+		numSongs++;
+	}
+
+	void DLL::printList(void){
+		DNode *live = first;
+
+		while(live != NULL){
+			live->printSong();
+			live = live->next;
+		}
+	}
+
+
 
 
 
