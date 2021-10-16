@@ -44,7 +44,27 @@ using namespace std;
 		}
 	}
 
+	int DLL::remove(string t) {
 
+	}
 
+	Song DLL::*pop() {
 
+	}
+
+	void DLL::moveUp(string t) {
+
+	}
+
+	void DLL::moveDown(string t) {
+
+	}
+
+	void DLL::makeRandom() {
+
+	}
+
+	void DLL::listDuration(int *tm, int *ts) {
+
+	}
 
