@@ -195,6 +195,18 @@ using namespace std;
 		}
 
 		void DLL::makeRandom(){
+	           int num1 = 0;
+	           int x = 0;
+	           Song *s;
+	           for(int i = 0; i < 2*numSongs; i++){
+	               num1 = rand() % (2*numSongs) + 1;
+	               x = 0;
+	               s = first->song;
+	               while(x < num1){
+	                   DLL::moveDown(s->title);
+	                   x++;
+	               }
+	           }
 
 
 		}
